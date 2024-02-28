@@ -1,0 +1,22 @@
+
+
+.admins-link,
+.pendingstatus-link {
+    color: green; /* Green color for "Admins" and "Pendingstatus" links */
+}
+
+.print-link {
+    color: red; /* Red color for "Print" link */
+}
+
+.list-link {
+    color: orange; /* Orange color for "List" link */
+}
+
+.logout-link {
+    color: purple; /* Purple color for "LogOut" link */
+}
+.card{
+    background-color: black !important;
+    color: white !important;
+} 

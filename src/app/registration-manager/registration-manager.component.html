@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>User Registration</h2>
+  <form >
+      <label for="managerName">Manager Name</label>
+      <input type="text" id="managerName" name="managerName" [(ngModel)]="manager.managerName" required><br>
+
+      <label for="emailId">Email</label>
+      <input type="email" id="emailId" name="emailId" [(ngModel)]="manager.emailId" required><br>
+
+      <label for="mobileNumber">Mobile Number</label>
+      <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" [(ngModel)]="manager.mobileNumber" required><br>
+
+      <label for="city">City</label>
+      <input type="text" id="city" name="city" [(ngModel)]="manager.city" required><br>
+
+      <label for="street">Street</label>
+      <input type="text" id="street" name="street" [(ngModel)]="manager.street" required><br>
+
+      <label for="state">State</label>
+      <input type="text" id="state" name="state" [(ngModel)]="manager.state" required><br>
+
+      <label for="country">Country</label>
+      <input type="text" id="country" name="country" [(ngModel)]="manager.country" required><br>
+
+      <label for="zipCode">Zip Code</label>
+      <input type="text" id="zipCode" name="zipCode" pattern="[0-9]{6}" [(ngModel)]="manager.zipCode" required><br>
+
+      <label for="userName">Username</label>
+      <input type="text" id="userName" name="userName" [(ngModel)]="manager.userName" required><br>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" [(ngModel)]="manager.password" required><br>
+
+      <button type="submit" (click)="saveAllManager()"  class="btn btn-primary" routerLink="/login">REGISTER</button>
+
+
+  </form>
+</div>

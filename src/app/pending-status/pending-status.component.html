@@ -1,0 +1,33 @@
+
+
+<div class="container mt-5">
+    <h1><strong>ALL ADMIN DETAILS</strong></h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ADMIN NAME</th>
+          <th scope="col">EMAIL ID</th>
+          <th scope="col">MOBILE NUMBER</th>
+          <th scope="col">ISAPPROVED</th>
+          <th scope="col">ACTION</th>
+          
+        </tr>
+      </thead>
+      <tbody >
+        <tr   *ngFor="let pending of pendingAdmin">
+          <td>{{pending.adminName}}</td>
+          <td>{{pending.adminContacts[0].emailId}}</td>
+          <td>{{pending.adminContacts[0].mobileNumber}}</td>
+          <td>{{pending.isApproved}}</td>
+          <td>
+            <button class="btn btn-success" (click)="approveAdmin(true,pending.adminContacts[0].emailId)">OK</button>
+            <button class="btn btn-danger" style="margin-left: 10px;" (click)="approveAdmin(false,pending.adminContacts[0].emailId)">DELETE</button>
+          </td>
+          
+
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

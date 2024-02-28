@@ -1,0 +1,25 @@
+app.component.html
+<div class="container mt-5">
+    <h1><strong>ALL ADMIN DETAILS</strong></h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ADMIN NAME</th>
+          <th scope="col">EMAIL ID</th>
+          <th scope="col">MOBILE NUMBER</th>
+          <th scope="col">ISAPPROVED</th>
+          
+        </tr>
+      </thead>
+      <tbody >
+        <tr   *ngFor="let admin of adminDetails">
+          <td>{{admin.adminName}}</td>
+          <td>{{admin.adminContacts[0].emailId}}</td>
+          <td>{{admin.adminContacts[0].mobileNumber}}</td>
+          <td>{{admin.isApproved}}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
