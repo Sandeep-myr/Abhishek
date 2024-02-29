@@ -7,6 +7,7 @@ import { AdminDetailsComponent } from './admin-details/admin-details.component';
 import { PendingStatusComponent } from './pending-status/pending-status.component';
 import { StatusComponent } from './status/status.component';
 import { ManagerLoginComponent } from './manager-login/manager-login.component';
+import { ProfilePictureComponent } from './profile-picture/profile-picture.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:"dashBoard",component:DashBoardComponent},
   {path:"adminDetails", component:AdminDetailsComponent},
   {path:"pendingStatus", component:PendingStatusComponent},
-  {path:"status",component:StatusComponent}
+  {path:"status",component:StatusComponent},
+  {path:"profilePicture",component:ProfilePictureComponent}
 ];
 
 @NgModule({

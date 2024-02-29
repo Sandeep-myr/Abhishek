@@ -27,14 +27,15 @@ export class ManagerLoginComponent {
     // console.log(this.logins)
     this.service.managerLogin(this.logins).subscribe((data: any) => {
       this.manager = data;
+      this.status = true;
       // console.log(this.logins)
       this.manager = JSON.stringify(this.manager);
       sessionStorage.setItem('manager', this.manager);
-      this.status = true;
+      
       this.msg = 'Login successfull';
     }, error => {
-      console.log(error);
-      this.status = true;
+      
+      
       this.msg = 'Invalid Credentials';
 
     })

@@ -8,8 +8,14 @@ import { Router } from '@angular/router';
   styleUrl: './dash-board.component.css'
 })
 export class DashBoardComponent implements OnInit{
+
+    userData={managerName: '', emailId: '' };
+visible: boolean=false;
   constructor(private route:Router){}
+  showPendingStatus:boolean=true;
+  showAdminDetails:boolean=false;
   items:any;
+  
 
   ngOnInit() {
     this.items = [
@@ -17,7 +23,8 @@ export class DashBoardComponent implements OnInit{
           label: 'About',
           icon: 'pi pi-fw pi-file',
           routerLink: ['/about'],
-          styleClass: 'about-link' 
+          styleClass: 'about-link',
+
       },
       {
           label: 'FeedBack',
@@ -38,7 +45,7 @@ export class DashBoardComponent implements OnInit{
               {
                   label: 'Pendingstatus',
                   icon: 'pi pi-fw pi-user-plus',
-                  routerLink: ['/pendingStatus'],
+                  routerLink: ['/pendingStatus'],    
                   styleClass: 'pendingstatus-link' 
               },
               {
@@ -53,10 +60,44 @@ export class DashBoardComponent implements OnInit{
           label: 'LogOut',
           icon: 'pi pi-fw pi-power-off',
           routerLink: ['/login'],
-          styleClass: 'logout-link' 
+          styleClass: 'logout-link' ,
+          command  : () => this.logOut()
       }
   ];
+  this.showDialog();
+  this.closeRegistration();
+  this.logOut();
   
   }
+  logOut(){
+    sessionStorage.removeItem('manager');
+  }
+//   showScreenDetails(){
+//     this.showAdminDetails=true;
+//     this.showPendingStatus=false;
+//   }
+//   showScreenPending(){
+//     this.showAdminDetails=false;
+//     this.showPendingStatus=true;
+//   }
+showDialog() {
+
+    const model=document.getElementById('myModal');
+    if(model!=null)
+    {
+        model.style.display='block';
+    }
+    this.visible = true;
+   const storeData=sessionStorage.getItem('manager');
+   if(storeData){
+        this.userData=JSON.parse(storeData);
+   }
+  }
+  closeRegistration() {
+        const model=document.getElementById('myModal')
+        if(model!=null){
+            model.style.display='none';
+        }
+    }
   
 }

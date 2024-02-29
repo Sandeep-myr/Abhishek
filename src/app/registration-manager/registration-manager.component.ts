@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { manager } from './manager';
-import { error } from 'console';
+
 import { Router } from '@angular/router';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+
 import { ApiServiceService } from '../service/api-service.service';
 // import { country } from '../../country';
 // import { state } from '../../state';

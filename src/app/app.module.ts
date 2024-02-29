@@ -23,9 +23,13 @@ import { StatusComponent } from './status/status.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiServiceService } from './service/api-service.service';
 import { ManagerLoginComponent } from './manager-login/manager-login.component';
-
-
-
+import { ProfilePictureComponent } from './profile-picture/profile-picture.component';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AvatarModule } from 'primeng/avatar';
 
 
 @NgModule({
@@ -37,7 +41,8 @@ import { ManagerLoginComponent } from './manager-login/manager-login.component';
     AdminDetailsComponent,
     PendingStatusComponent,
     StatusComponent,
-    ManagerLoginComponent
+    ManagerLoginComponent,
+    ProfilePictureComponent
 
   ],
   imports: [
@@ -49,9 +54,13 @@ import { ManagerLoginComponent } from './manager-login/manager-login.component';
     MenubarModule,
     TagModule,
     TableModule,
-    HttpClientModule
-    
-    
+    HttpClientModule,
+    DialogModule,
+    ButtonModule,
+    AnimateOnScrollModule,
+    NoopAnimationsModule,
+    BrowserAnimationsModule,
+    AvatarModule
   ],
   providers: [
     provideClientHydration(),

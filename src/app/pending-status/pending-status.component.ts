@@ -24,6 +24,7 @@ export class PendingStatusComponent implements OnInit{
     this.PendingRequestMethod();
   
     
+    
    
   }
   pendingAdmin:any;

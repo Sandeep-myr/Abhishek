@@ -1,9 +1,73 @@
 <div class="card">
     <p-menubar [model]="items">
         <ng-template pTemplate="end">
-            <input type="text" pInputText placeholder="Search" class="w-full" style="margin-right: 100px;"/>
-            <span class="pi pi-user"></span><br>
-            <label style="margin-left: 250px;">Profile Picture</label>
+            <p-button type="button" (click)="showDialog()" icon="pi pi-user">
+            
+            </p-button> <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+              
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" (click)="closeRegistration()" data-bs-dismiss="modal"></button>
+                    </div>
+                        <div>
+                            <span><img src="assets/free-user-1648810-1401302 (1).webp" style="height: 100px;width: 100px; margin-left: 160px;"></span>
+                        </div><br>  
+                      <h4 class="modal-title" style=" margin-left: 130px;">MANAGER PROFILE</h4>
+                      
+              
+                    <!-- Modal body -->
+                        <div class="modal-body">
+                            <label>MANAGER NAME:</label>
+                            <label >{{userData.managerName}}</label>
+                        </div>
+                    <div class="modal-body">
+                        <label>USREEMAIL ID:</label> 
+                        <label>{{userData.emailId}}</label>
+                    </div>
+              
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" (click)="closeRegistration()" data-bs-dismiss="modal">Close</button>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+                   
+                <br>
         </ng-template>
     </p-menubar>
 </div>
+<div class="container-fluid">
+    <img src="assets/Business-Cover-Page-template-TemplateLab.com_-scaled.jpg" style="width: 100%;">
+
+</div>
+
+<h1>ABOUT PAGE</h1>
+<p><b>
+        OVER 40 YEARS OF EXPERIENCE
+        Our Story
+        With a career in the construction industry spanning over 40 years, the founder of Project On Track, Mr. Raju,
+        has extensive experience managing and handling large and complex projects of a multidiscipline nature.
+        Raju used conventional tools and systems through a manual process to track construction management tasks. Soon,
+        he realized that there could be a better way to manage construction using technology. So, he started identifying
+        opportunities to digitize various parts of the construction business. With the belief that this could
+        revolutionize the construction industry, he formulated a company and began developing software with over 20
+        highly skilled developers.
+        After years of development and testing, we have evolved Project on Track software. We believe this is the most
+        powerful software for managing workflow in the construction industry. With role-based security access, users can
+        decide who gets access to which modules. In addition, being in the cloud, this software provides access to
+        real-time data anytime, anywhere in the world. Using this software, you can mitigate risks and save money by
+        taking corrective action earlier in the process.
+        As a company, we are dedicated to providing world-class support to our clients. With teams spread across the
+        globe, we can help our clients in different time zones. In addition, with great technology partners on board, we
+        are developing video-based software tutorials, so everyone can take advantage of learning this software at their
+        own pace, from the comfort of their own home.
+        With Project on Track, we assist our customers in remaining ahead of the competition by managing their projects
+        from start to end through a cloud-based, integrated construction management platform in a multi-user
+        environment. Our innovative and unique software provides easy-to-use business tools and solutions that connect
+        your field operations and office in real-time. We have headquarters in Sydney, Australia, and a support office
+        in India, and we are serving our customers across the globe.
+    </b></p>

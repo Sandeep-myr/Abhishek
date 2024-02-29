@@ -36,7 +36,7 @@ export class AdminDetailsComponent implements OnInit {
 getAllAdmins(){
   return this.apiser.fetchAdminDetails().subscribe(data=>{
     this.adminDetails=data;
-    console.log(this.adminDetails);
+    
   },error=>console.log(error));
 
 }
